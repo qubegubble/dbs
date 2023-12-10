@@ -20,6 +20,9 @@ def make_request(url):
     return response
 
 
+# Daher die MatchId's bereits in den Match Files enthalten sind
+# wurden die Files die nur MatchId's haben temporär zwischengespeichert
+# und dann verworfen
 def process_rank(input_path, output_path):
     with open(input_path, 'r', encoding='utf-8') as json_file:
         existing_data = json.load(json_file)
@@ -67,8 +70,8 @@ def process_rank(input_path, output_path):
 
 rank_paths = {
     'Iron4': {
-        'input_path': 'C:\YourPath\Input',
-        'output_path': 'C:\YourPath\Output',
+        'input_path': 'YourPath',
+        'output_path': 'YourPath',
     },
 }
 

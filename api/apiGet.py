@@ -1,17 +1,15 @@
 import requests
 import json
 
-# Your Riot API key
-api_key = 'RGAPI-ef56e99c-ccb1-423f-ad8b-20dd95cc349d'
+api_key = 'YOUR-API-KEY'
 
 base_url = 'https://euw1.api.riotgames.com/lol/league-exp/v4/entries'
 queue = 'RANKED_SOLO_5x5'
-tier = 'SILVER'
-division = 'III'
+tier = ''
+division = ''
 pages_to_retrieve = 20
 
-# Define the path where you want to save the JSON data
-output_path = 'L:\Studium\Semester_4\DBS\LolData\Silver\Silver3Players.json'
+output_path = 'YOUR-PATH'
 
 headers = {
     'X-Riot-Token': api_key
@@ -31,7 +29,6 @@ for page in range(1, pages_to_retrieve + 1):
     else:
         print(f"Error: {response.status_code}")
 
-# Save the collected data as JSON
 with open(output_path, 'w') as json_file:
     json.dump(all_data, json_file, indent=2)
 

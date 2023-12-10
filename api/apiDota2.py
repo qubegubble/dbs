@@ -2,7 +2,7 @@ import requests
 import json
 import time
 
-api_key = '85518fb0-70d1-423d-bff5-c798c0e5b5ec'
+api_key = 'YOUR-API-KEY'
 
 
 def fetch_match_ids(api_key, start_index, end_index):
@@ -57,7 +57,7 @@ for batch_number in range(num_match_id_batches):
 
             matches_processed += 1
 
-    file_path = f"L:\Studium\Semester_4\DBS\dota2Data\Matches\match_data_batch{batch_number + 1}.json"
+    file_path = f"YourPath\{batch_number + 1}.json"
 
     with open(file_path, 'w') as json_file:
         json.dump(match_data_list, json_file, indent=2)
