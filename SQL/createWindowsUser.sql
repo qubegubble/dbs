@@ -1,0 +1,1 @@
+CREATE LOGIN [Domain\WindowsUser] FROM WINDOWS;

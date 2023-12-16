@@ -1,0 +1,8 @@
+SET SHOWPLAN_TEXT ON;
+GO
+
+-- Your SQL Query Here
+SELECT * FROM Players WHERE tier = 'BRONZE';
+GO
+
+SET SHOWPLAN_TEXT OFF;

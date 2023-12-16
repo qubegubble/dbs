@@ -1,0 +1,2 @@
+ALTER TABLE Players
+ADD CONSTRAINT PK_Players_puuid PRIMARY KEY (puuid);
